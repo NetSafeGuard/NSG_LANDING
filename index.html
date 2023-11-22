@@ -3,10 +3,40 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="NetSafeGuard - Home" name="description">
+        <meta content="NetSafeGuard" name="keywords">
+        <meta content="NetSafeGuard" name="author">
+        <meta content="index, follow" name="robots">
+        <meta content="pt" http-equiv="Content-Language">
+        <meta content="pt" name="language">
+        <meta description="NetSafeGuard - Home">
         <title>NetSafeGuard - Home</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
     </head>
-    <body>
-        ...
+    <body onload="loadContent()">
+        <div class="logo_container">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
+        <div class="content">
+            <h1>Fazer exames nunca foi tão fácil.</h1>
+            <p>O NetSafeGuard é a solução definitiva para uma experiência educacional segura e eficiente.
+            Com nossa plataforma inovadora, oferecemos dois aplicativos distintos.</p>
+
+            <div class="buttons">
+                <button id="admin" class="button">Download Admin</button>
+                <button id="student" class="button">Download Aluno</button> 
+            </div>
+
+            <div class="imagescontainer">
+                <img src="assets/images/images.png" alt="Images"/>
+            </div>
+        </div>
+
+        <div class="gradient"></div>
+        <script src="libs/anime.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
