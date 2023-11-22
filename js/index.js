@@ -27,3 +27,7 @@ const loadContent = () => {
         easing: 'easeInOutSine'
     })
 }
+
+function DOWNLOAD() {
+    window.open("https://github.com/NetSafeGuard/NSG_ADMIN/releases/download/0.0.1/nsg_0.0.0_x64_en-US.msi")
+}
