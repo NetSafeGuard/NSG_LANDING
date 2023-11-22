@@ -104,6 +104,10 @@ body {
     margin-top: 45px;
 }
 
+.imagescontainer img {
+    width: 100%;
+}
+
 .gradient {
     position: fixed;
     width: 100vw;
@@ -124,4 +128,34 @@ body {
 
 ::-webkit-scrollbar-track {
     background-color: #0E0E0E;
+}
+
+
+/* Responsive CSS */
+
+@media only screen and (max-width: 800px) {
+    .content h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .content p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .button {
+        padding: 15px 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .imagescontainer {
+        margin-top: 30px;
+    }
 }
