@@ -1,161 +1,191 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 
+@keyframes chat {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
 }
 
 body {
-    background-color: #181818;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    opacity: 0;
+  background-color: #181818;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  opacity: 0;
 }
 
 .logo_container {
-    margin-top: 30px;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+  margin-top: 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 95px;
 }
 
 .content h1 {
-    color: white;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 70px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 88px;
-    letter-spacing: 0.2px;
-    max-width: 750px;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 88px;
+  letter-spacing: 0.2px;
+  max-width: 750px;
 }
 
 .content p {
-    color: white;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0.2px;
-    max-width: 951px;
-    margin-top: 17px;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  max-width: 951px;
+  margin-top: 17px;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    margin-top: 95px;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  margin-top: 95px;
 }
 
 .button {
-    cursor: pointer;
-    padding: 20px 40px;
-    box-shadow: 0px 4px 31px 0px rgba(0, 0, 0, 0.15);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 25px;
-    letter-spacing: 0.2px;
-    outline: none;
-    border: none;
-    transition: all linear 500ms;
-    transform: scale(0);
+  cursor: pointer;
+  padding: 20px 40px;
+  box-shadow: 0px 4px 31px 0px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  outline: none;
+  border: none;
+  transition: all linear 500ms;
+  transform: scale(0);
 }
 
 #admin {
-    background-color: #4452FE;
+  background-color: #4452fe;
 }
 
 #admin:hover {
-    filter: drop-shadow(1px 1px 5px #4452FE)
+  filter: drop-shadow(1px 1px 5px #4452fe);
 }
 
 #student {
-    border: 1px solid white;
-    background-color: #181818;
+  border: 1px solid white;
+  background-color: #181818;
 }
 
 #student:hover {
-    background-color: #2D2D2D;
+  background-color: #2d2d2d;
 }
 
 .imagescontainer {
-    margin-top: 45px;
+  margin-top: 45px;
 }
 
 .imagescontainer img {
-    width: 100%;
+  width: 100%;
 }
 
 .gradient {
-    position: fixed;
-    width: 100vw;
-    height: 20%;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #0E0E0E 66.15%);
-    z-index: -1;
+  position: fixed;
+  width: 100vw;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0e0e0e 66.15%);
+  z-index: -1;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    background-color: #0E0E0E;
+  width: 5px;
+  background-color: #0e0e0e;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #4452FE;
+  background-color: #4452fe;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #0E0E0E;
+  background-color: #0e0e0e;
 }
 
+.chat {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 100;
+  background-color: #4452fe;
+  border-radius: 50%;
+  animation: chat 1s ease-in-out infinite alternate;
+  transition: all linear 500ms;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat i {
+  color: white;
+  font-size: 30px;
+}
 
 /* Responsive CSS */
 
 @media only screen and (max-width: 800px) {
-    .content h1 {
-        font-size: 50px;
-        line-height: 60px;
-    }
+  .content h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
 
-    .content p {
-        font-size: 15px;
-        line-height: 25px;
-    }
+  .content p {
+    font-size: 15px;
+    line-height: 25px;
+  }
 
-    .buttons {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .button {
-        padding: 15px 30px;
-        font-size: 15px;
-        line-height: 20px;
-    }
+  .button {
+    padding: 15px 30px;
+    font-size: 15px;
+    line-height: 20px;
+  }
 
-    .imagescontainer {
-        margin-top: 30px;
-    }
+  .imagescontainer {
+    margin-top: 30px;
+  }
 }

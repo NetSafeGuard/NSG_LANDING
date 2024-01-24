@@ -50,6 +50,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      type="text/css"
+    />
   </head>
   <body onload="loadContent()">
     <div class="logo_container">
@@ -75,13 +80,19 @@
       </div>
     </div>
 
-    <div href="javascript:void(Tawk_API.toggle())">Clica aqui</div>
+    <div onclick="Close()" class="chat">
+      <i class="fas fa-question"></i>
+    </div>
 
     <div class="gradient"></div>
     <script src="libs/anime.js"></script>
     <script src="js/index.js"></script>
 
     <script>
+      function Close() {
+        document.querySelector(".chat").style.display = "none";
+        Tawk_API.toggle();
+      }
       (function (i, s, o, g, r, a, m) {
         i["GoogleAnalyticsObject"] = r;
         (i[r] =
@@ -120,6 +131,10 @@
       s1.setAttribute("crossorigin", "*");
       s0.parentNode.insertBefore(s1, s0);
     })();
+
+    Tawk_API.onChatMinimized = function () {
+      document.querySelector(".chat").style.display = "flex";
+    };
   </script>
   <!--End of Tawk.to Script-->
 </html>
