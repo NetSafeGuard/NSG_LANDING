@@ -75,10 +75,8 @@
       </div>
     </div>
 
-    <button class="chat" onclick="openChat()">
-      <img src="assets/images/chat.svg" alt="Chat" />
-    </button>
-    
+    <div href="javascript:void(Tawk_API.toggle())">Clica aqui</div>
+
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
@@ -92,10 +90,6 @@
         s1.setAttribute("crossorigin", "*");
         s0.parentNode.insertBefore(s1, s0);
       })();
-    
-      function openChat() {
-        Tawk_API.toggle();
-      }
     </script>
 
     <div class="gradient"></div>
