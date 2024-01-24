@@ -156,6 +156,10 @@ body {
   align-items: center;
 }
 
+.chat:hover {
+  filter: drop-shadow(1px 1px 5px #4452fe);
+}
+
 .chat i {
   color: white;
   font-size: 23px;
