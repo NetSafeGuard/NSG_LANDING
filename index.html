@@ -69,10 +69,35 @@
       </p>
 
       <div class="buttons">
-        <button id="admin" class="button" onclick="DOWNLOAD()">
+        <button id="admin" class="button" onclick="Download('Admin')">
           Download Admin
         </button>
-        <button id="student" class="button">Download Aluno</button>
+        <button id="student" class="button" onclick="toggleModal()">
+          Download Aluno
+        </button>
+      </div>
+
+      <div id="warning">
+        <div class="top">
+          <div class="title">Dependência Necessária!</div>
+          <div class="description">
+            Esta aplicação requer a instalação do WinPcap para funcionar
+            corretamente. Caso não tenha o WinPcap instalado, poderá enfrentar
+            um problema relacionado ao arquivo packet.dll.
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="inline">
+            <button class="secondary" onclick="Download('Students')">
+              Instalar Students
+            </button>
+            <button class="tertiary" onclick="Download('Dependency')">
+              Instalar Dependência
+            </button>
+          </div>
+
+          <p onclick="toggleModal()">Voltar atrás</p>
+        </div>
       </div>
 
       <div class="imagescontainer">
