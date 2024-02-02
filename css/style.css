@@ -295,4 +295,48 @@ body {
   .imagescontainer {
     margin-top: 30px;
   }
+
+  #warning {
+    width: 80%;
+  }
+
+  #warning .title {
+    font-size: 17px;
+  }
+
+  #warning .description {
+    font-size: 12px;
+  }
+
+  #warning .bottom button {
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  #warning .bottom p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #warning {
+    width: 90%;
+  }
+
+  #warning .title {
+    font-size: 15px;
+  }
+
+  #warning .description {
+    font-size: 11px;
+  }
+
+  #warning .bottom button {
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  #warning .bottom p {
+    font-size: 10px;
+  }
 }
