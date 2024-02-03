@@ -47,12 +47,44 @@ let isModalOpen = false;
 function toggleModal() {
   if (isModalOpen) {
     console.log("closing modal");
-    document.getElementById("warning").style.display = "none";
     document.body.style.overflowY = "auto";
+
+    anime({
+        targets: "#warning",
+        opacity: 0,
+        duration: 1000,
+        easing: "easeInOutQuad",
+    });
+
+    anime({
+        targets: "#warning",
+        top: "0%",
+        duration: 500,
+        easing: "easeInOutQuad",
+    });
+
+    setTimeout(() => {
+      document.getElementById("warning").style.display = "none";
+    }, 500);
 
     isModalOpen = false;
     return;
   }
+
+
+  anime({
+    targets: "#warning",
+    top: "50%",
+    duration: 500,
+    easing: "easeInOutQuad",
+  });
+
+  anime({
+    targets: "#warning",
+    opacity: 1,
+    duration: 1000,
+    easing: "easeInOutQuad",
+  });
 
   isModalOpen = true;
   document.getElementById("warning").style.display = "flex";
