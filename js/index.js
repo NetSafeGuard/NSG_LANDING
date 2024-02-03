@@ -33,7 +33,7 @@ function Download(type) {
       break;
     case "Students":
       window.open(
-        "https://github.com/NetSafeGuard/NSG_STUDENTS/releases/download/untagged-b221c35beef1a78a62d3/nsgtest.exe"
+        "https://github.com/NetSafeGuard/NSG_STUDENTS/releases/download/0.01/nsgtest.exe"
       );
       break;
     case "Dependency":
