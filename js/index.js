@@ -28,7 +28,7 @@ function Download(type) {
   switch (type) {
     case "Admin":
       window.open(
-        "https://github.com/NetSafeGuard/NSG_ADMIN/releases/download/0.0.1/nsg_0.0.0_x64_en-US.msi"
+        "https://github.com/NetSafeGuard/NSG_ADMIN/releases/latest/download/NetSafeGuard.Admin_0.0.0_x64_en-US.msi"
       );
       break;
     case "Students":
