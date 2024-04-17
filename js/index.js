@@ -1,5 +1,7 @@
 document.ondragstart = () => false;
 
+let admin_url = "";
+
 const loadContent = () => {
   anime({
     targets: "body",
@@ -27,9 +29,20 @@ const loadContent = () => {
 function Download(type) {
   switch (type) {
     case "Admin":
-      window.open(
-        "https://github.com/NetSafeGuard/NSG_ADMIN/releases/latest/download/NetSafeGuard.Admin_0.0.0_x64_en-US.msi"
-      );
+      if(admin_url !== "") {
+        fetch("https://api.github.com/repos/NetSafeGuard/NSG_ADMIN/releases/latest")
+          .then((response) => response.json())
+          .then((data) => {
+            data.assets.forEach((asset) => {
+              if (asset.name.includes("NetSafeGuard.Admin") && asset.name.endsWith(".msi")) {
+                window.open(asset.browser_download_url);
+                admin_url = asset.browser_download_url;
+              }
+            });
+        });
+      } else {
+        window.open(admin_url);
+      }
       break;
     case "Students":
       window.open(
