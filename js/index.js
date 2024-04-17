@@ -29,7 +29,7 @@ const loadContent = () => {
 function Download(type) {
   switch (type) {
     case "Admin":
-      if(admin_url !== "") {
+      if(admin_url == "") {
         fetch("https://api.github.com/repos/NetSafeGuard/NSG_ADMIN/releases/latest")
           .then((response) => response.json())
           .then((data) => {
